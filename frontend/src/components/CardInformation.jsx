@@ -1,5 +1,5 @@
-import "./CardInformation.css";
 import { useState, useEffect } from "react";
+import styles from "./CardInformation.module.css";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -18,10 +18,10 @@ export default function cardInformation({ countryCode, changeInput }) {
     newsData();
   }, [changeInput]);
   return (
-    <div className="cardInformation">
-      <div className="newsContainer">
+    <div className={styles.cardInformation}>
+      <div className={styles.newsContainer}>
         {news && (
-          <div className="displayNew" style={{ padding: "15px" }}>
+          <div className={styles.displayNew} style={{ padding: "15px" }}>
             <h2>{news.title}</h2>
             {/* <h2>{news.description}</h2> */}
             <h2>{news.content}</h2>
