@@ -1,0 +1,13 @@
+.newsContainer {
+  background-color: #1D5254;
+  width: 80vw;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 130px
+}
+.news {
+  background-color: #f9f1ac;
+  border-radius: 10px;
+  margin: 20px;
+}

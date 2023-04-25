@@ -12,6 +12,8 @@ export default function cardInformation({ countryCode, changeInput }) {
     )
       .then((res) => res.json())
       .then((response) => setNews(response.articles[0]));
+    // .then((data) => console.log(data))
+    // .catch((err) => console.log(err))
   };
   // .then((response) => console.log(response));
   useEffect(() => {

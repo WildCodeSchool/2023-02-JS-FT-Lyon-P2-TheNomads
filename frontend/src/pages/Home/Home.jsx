@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import styles from "./Home.module.css";
+import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
+  const { setCountryInformation } = useContext(NewsContext);
+
   const [countryInput, setCountryInput] = useState("Select your country");
   const [countryEmoji, setCountryEmoji] = useState(null);
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
@@ -12,6 +15,8 @@ export default function Home() {
   const [countryFlag, setCountryFlag] = useState();
 
   const changeInput = (name, emoji, code, image) => {
+    setCountryInformation(code);
+    // setselectedCountry({ name, emoji, code, image });
     setCountryInput(name);
     setCountryEmoji(emoji);
     setCountryCode(code);
