@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../components/SearchBar.css";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
-import "./Home.css";
+import styles from "./Home.module.css";
 
 export default function Home() {
   const [countryInput, setCountryInput] = useState("Select your country");
@@ -11,7 +10,6 @@ export default function Home() {
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
   const [countryCode, setCountryCode] = useState();
   const [countryFlag, setCountryFlag] = useState();
-  // const [showDropDownMenu, setShowDropDownMenu] = useState(false);
 
   const changeInput = (name, emoji, code, image) => {
     setCountryInput(name);
@@ -30,12 +28,12 @@ export default function Home() {
     }
   };
   return (
-    <div className="mainContainer">
-      {countryFlag && <img className="flag" src={countryFlag} alt="" />}
+    <div className={styles.mainContainer}>
+      {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
       <h1>HOME</h1>
-      <div className="searchBar">
+      <div className={styles.searchBar}>
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
-          className="displayCountryName"
+          className={styles.displayCountryName}
           placeholder="Select your country"
           onChange={(e) => {
             setCountryInput(e.target.value);
@@ -45,31 +43,33 @@ export default function Home() {
         >
           {countryInput}
           {countryEmoji}
-          <div className="buttonDropDownMenu" />
+          <div className={styles.buttonDropDownMenu} />
         </div>
-        <div className="dropDownMenu">
-          <ul>
-            {countries.map((country) => (
-              <li // eslint-disable-line
-                className="countryOption"
-                onKeyUp={(e) => handleKeyUp(e)}
-                onClick={() =>
-                  changeInput(
-                    country.name,
-                    country.emoji,
-                    country.code,
-                    country.image
-                  )
-                }
-              >
-                {country.name} {country.emoji}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {dropDownMenu && (
+          <div className={styles.dropDownMenu}>
+            <ul>
+              {countries.map((country) => (
+                <li // eslint-disable-line
+                  className={styles.countryOption}
+                  onKeyUp={(e) => handleKeyUp(e)}
+                  onClick={() =>
+                    changeInput(
+                      country.name,
+                      country.emoji,
+                      country.code,
+                      country.image
+                    )
+                  }
+                >
+                  {country.name} {country.emoji}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       {countryEmoji && (
-        <div className="cardContainer">
+        <div className={styles.cardContainer}>
           <Link to="/results/news">
             <CardInformation
               countryCode={countryCode}
