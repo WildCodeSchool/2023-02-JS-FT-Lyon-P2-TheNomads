@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import styles from "../../components/SearchBar.module.css";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import styles from "./Home.module.css";
@@ -11,7 +10,6 @@ export default function Home() {
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
   const [countryCode, setCountryCode] = useState();
   const [countryFlag, setCountryFlag] = useState();
-  // const [showDropDownMenu, setShowDropDownMenu] = useState(false);
 
   const changeInput = (name, emoji, code, image) => {
     setCountryInput(name);
