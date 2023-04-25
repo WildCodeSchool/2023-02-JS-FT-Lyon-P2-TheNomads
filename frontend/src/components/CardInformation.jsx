@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import styles from "./CardInformation.module.css";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;

@@ -3,83 +3,13 @@ box-shadow: 0 0 0 3px red inset;
 }*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 /*Navbar desktop sreen*/
-@media screen and (min-width: 700px) {
-body{
-  background-color: #FCF3A6;
-}
-
-.navbarlinks{
-    background-color: #1C5253;
-    Width: 500px;
-    Height:55px;
-    border-radius:10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-    list-style-type: none;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin : 5px;
-
-}
-
-
-li a{
-   color: #FCF3A6;
-   text-decoration: none;
-}
-
-a{
-    flex: 1;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-    padding: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.5s ease-out;
-}
-    
-a:hover,
-a:focus {
-  background-color: #FCF3A6;
-  color:#1C5253;
-  font-weight: bold;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-img{
-  display: none;
-width: 35px;
-position: absolute;
-left: 10px;
-}
-}
-.button{
-height: 40px;
-  width: 40px;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-}
-
-.logo{
-  display: flex;
-  position: absolute;
-width: 400px;
-height: 400px;
-left: 536px;
-top: -70px;
-}
-
 /*NavBar mobile*/ 
 
-@media screen and (max-width : 700px){
 
   body{
     background-color: #FCF3A6;
   }
-  .logo{
+  .headerLogo{
     display: flex;
     position: absolute;
   width: 300px;
@@ -87,7 +17,7 @@ top: -70px;
   left: 150px;
   top: -50px;
   }
-img{
+  .logo{
   display: block;
   width: 35px;
   position: absolute;
@@ -99,12 +29,13 @@ img{
 .navbarlinks{
 position: absolute;
  top: 0px;
-right: -100vw;
+right: 100vw;
  margin: 0;
  padding: 50px;
  list-style-type: none;
  background-color: #1C5253;
  width: 200px; 
+ height: 400px;
  display: flex;
  flex-direction: column;
  justify-content: space-between;
@@ -180,12 +111,12 @@ background-color: #FCF3A6;
   background-color: #FCF3A6;
   transform: rotate(-45deg);}
 
-  .shownav .burgerbar{
+ .shownav .burgerbar{
   background:transparent;
 width: 0;}
 
 /*burger menu after click on button burger*/
-li::after{
+.headerLinks::after{
   content: "";
   display: block;
   margin:0 auto;
@@ -197,12 +128,81 @@ li::after{
 
 }
 
-li:last-child::after{
+.headerLinks:last-child::after{
   display: none;
 }
 a:hover,
 a:focus {
-  font-weight: bold;
+font-weight: bold;
+ 
 }
 
+@media screen and (min-width: 700px) {
+  
+
+  
+
+body{
+  background-color: #FCF3A6;
 }
+
+.navbarlinks{
+    background-color: #1C5253;
+    Width: 500px;
+    Height:55px;
+    border-radius:10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin : 5px;
+
+}
+
+
+.headerLinks a{
+   color: #FCF3A6;
+   text-decoration: none;
+}
+
+a{
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+    
+a:hover,
+a:focus {
+  background-color: #FCF3A6;
+  color:#1C5253;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.button{
+height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.headerLogo{
+  display: flex;
+  position: absolute;
+width: 400px;
+height: 400px;
+left: 536px;
+top: -70px;
+}
+}
+

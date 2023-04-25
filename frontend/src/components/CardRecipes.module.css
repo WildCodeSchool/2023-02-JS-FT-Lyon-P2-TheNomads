@@ -1,0 +1,13 @@
+/**{
+    box-shadow: 0 0 0 3px red inset;
+}*/
+.recipesContainer img{
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.cardRecipes{
+    display: flex;
+    flex-direction: column;
+}

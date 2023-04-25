@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
+import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -10,12 +11,14 @@ export default function Home() {
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
   const [countryCode, setCountryCode] = useState();
   const [countryFlag, setCountryFlag] = useState();
+  const [countryFood, setCountryFood] = useState();
 
-  const changeInput = (name, emoji, code, image) => {
+  const changeInput = (name, emoji, food, code, image) => {
     setCountryInput(name);
     setCountryEmoji(emoji);
     setCountryCode(code);
     setCountryFlag(image);
+    setCountryFood(food);
   };
 
   const handleDropDownMenu = () => {
@@ -56,6 +59,7 @@ export default function Home() {
                     changeInput(
                       country.name,
                       country.emoji,
+                      country.food,
                       country.code,
                       country.image
                     )
@@ -74,6 +78,13 @@ export default function Home() {
             <CardInformation
               countryCode={countryCode}
               changeInput={changeInput}
+            />
+          </Link>
+          <Link to="/results/receipts">
+            <CardRecipes
+              countryCode={countryCode}
+              changeInput={changeInput}
+              countryFood={countryFood}
             />
           </Link>
         </div>
