@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import styles from "./Home.module.css";
+import Footer from "../../Footer";
 
 export default function Home() {
   const [countryInput, setCountryInput] = useState("Select your country");
@@ -78,6 +79,7 @@ export default function Home() {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

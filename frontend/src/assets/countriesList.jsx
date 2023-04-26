@@ -81,7 +81,6 @@ const countries = [
   },
   {
     code: "AR",
-    name: "Argentina",
     emoji: "🇦🇷",
     unicode: "U+1F1E6 U+1F1F7",
     image:
@@ -306,6 +305,7 @@ const countries = [
   {
     code: "CA",
     name: "Canada",
+    food: "Canadian",
     emoji: "🇨🇦",
     unicode: "U+1F1E8 U+1F1E6",
     image:

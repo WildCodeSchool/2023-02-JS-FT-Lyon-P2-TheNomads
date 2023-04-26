@@ -34,8 +34,8 @@
   font-size: 2rem;
   padding-left: 15px;
   border-radius: 10px;
-  color: #1D5254;
-  background-color: #FCF3A6;
+  color: #1d5254;
+  background-color: #fcf3a6;
   border: 1px solid black;
 }
 
@@ -46,7 +46,7 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  border-top: 20px solid #1D5254;
+  border-top: 20px solid #1d5254;
   border-left: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 20px solid transparent;
@@ -75,8 +75,8 @@
 }
 
 .mainContainer {
-  background-color: #1D5254;
-  display: flex;  
+  background-color: #1d5254;
+  display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
@@ -97,5 +97,4 @@
   right: 0;
   width: 300px;
   height: 200px;
-  
 }
