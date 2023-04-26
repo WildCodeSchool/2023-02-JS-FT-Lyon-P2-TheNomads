@@ -1,18 +1,18 @@
 /**{
 box-shadow: 0 0 0 3px red inset;
 }*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 /*Navbar desktop sreen*/
 @media screen and (min-width: 700px) {
-body{
-  background-color: #FCF3A6;
-}
+  body {
+    background-color: #fcf3a6;
+  }
 
-.navbarlinks{
-    background-color: #1C5253;
-    Width: 500px;
-    Height:55px;
-    border-radius:10px;
+  .navbarlinks {
+    background-color: #1c5253;
+    width: 500px;
+    height: 55px;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
@@ -21,188 +21,174 @@ body{
     list-style-type: none;
     padding-left: 5px;
     padding-right: 5px;
-    margin : 5px;
+    margin: 5px;
+  }
 
-}
+  li a {
+    color: #fcf3a6;
+    text-decoration: none;
+  }
 
-
-li a{
-   color: #FCF3A6;
-   text-decoration: none;
-}
-
-a{
+  a {
     flex: 1;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     border-radius: 10px;
     padding: 0.5rem;
     text-align: center;
     text-decoration: none;
     transition: all 0.5s ease-out;
+  }
+
+  a:hover,
+  a:focus {
+    background-color: #fcf3a6;
+    color: #1c5253;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  img {
+    display: none;
+    width: 35px;
+    position: absolute;
+    left: 10px;
+  }
 }
-    
-a:hover,
-a:focus {
-  background-color: #FCF3A6;
-  color:#1C5253;
-  font-weight: bold;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-img{
-  display: none;
-width: 35px;
-position: absolute;
-left: 10px;
-}
-}
-.button{
-height: 40px;
+.button {
+  height: 40px;
   width: 40px;
   background-color: transparent;
   border: none;
   color: inherit;
 }
 
-.logo{
+.logo {
   display: flex;
   position: absolute;
-width: 400px;
-height: 400px;
-left: 536px;
-top: -70px;
+  width: 400px;
+  height: 400px;
+  left: 536px;
+  top: -70px;
 }
 
-/*NavBar mobile*/ 
+/*NavBar mobile*/
 
-@media screen and (max-width : 700px){
-
-  body{
-    background-color: #FCF3A6;
+@media screen and (max-width: 700px) {
+  body {
+    background-color: #fcf3a6;
   }
-  .logo{
+  .logo {
     display: flex;
     position: absolute;
-  width: 300px;
-  height: 300px;
-  left: 150px;
-  top: -50px;
+    width: 300px;
+    height: 300px;
+    left: 150px;
+    top: -50px;
   }
-img{
-  display: block;
-  width: 35px;
-  position: absolute;
-  left: 10px;
-  z-index: 1;
+  img {
+    display: block;
+    width: 35px;
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+  }
 
-}
+  .navbarlinks {
+    position: absolute;
+    top: 0px;
+    right: 100vw;
+    margin: 0;
+    padding: 50px;
+    list-style-type: none;
+    background-color: #1c5253;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+  }
 
-.navbarlinks{
-position: absolute;
- top: 0px;
-right: -100vw;
- margin: 0;
- padding: 50px;
- list-style-type: none;
- background-color: #1C5253;
- width: 200px; 
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- border-radius:10px;
- transition: all .3s ease-out;
+  .shownav .navbarlinks {
+    left: 0;
+    visibility: visible;
+  }
 
-}
+  .shownav {
+    background-color: green;
+  }
+  a {
+    text-decoration: none;
+    color: #fcf3a6;
+    font-size: 22px;
+    padding: 20px;
+  }
 
-.shownav .navbarlinks{
-  left: 0;
-  visibility: visible;
+  /*button burger*/
+  .button {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .burgerbar,
+  .burgerbar::before,
+  .burgerbar::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    background-color: #1c5253;
+  }
 
+  .burgerbar::before,
+  .burgerbar::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+  }
+  .burgerbar::before {
+    transform: translateY(-12px);
+  }
+  .burgerbar::after {
+    transform: translateY(12px);
+  }
+  .shownav .burgerbar::before {
+    transform: rotate(45deg);
+    background-color: #fcf3a6;
+  }
 
+  .shownav .burgerbar:after {
+    background-color: #fcf3a6;
+    transform: rotate(-45deg);
+  }
 
-}
+  .shownav .burgerbar {
+    background: transparent;
+    width: 0;
+  }
 
-.shownav{
-  background-color: green;
-}
-a{
-  text-decoration: none;
-  color: #FCF3A6;
-  font-size: 22px;
-padding:20px;
+  /*burger menu after click on button burger*/
+  li::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 7vw;
+    height: 1px;
+    background-color: #fcf3a6;
+  }
 
-}
-
-/*button burger*/
-.button{
-display: block;
-position: fixed;
-top: 1rem;
-left: 1rem;
-
-}
-.button:hover{
-  cursor: pointer;
-
-}
-.burgerbar,
-.burgerbar::before,
-.burgerbar::after{
-display: block;
-width: 40px;
-height: 3px;
-position: relative;
-border-radius: 3px;
-transition:all .3s ease-in-out;
-background-color: #1C5253;
-
-}
-
-.burgerbar::before,
-.burgerbar::after{
-  content: "";
-  position: absolute;
-  left: 0px;
-
-
-}
-.burgerbar::before{
-  transform: translateY(-12px);
-}
-.burgerbar::after{
-  transform: translateY(12px);
-}
-.shownav .burgerbar::before{
-transform: rotate(45deg);
-background-color: #FCF3A6;
-}
-
-.shownav .burgerbar:after{
-  background-color: #FCF3A6;
-  transform: rotate(-45deg);}
-
-  .shownav .burgerbar{
-  background:transparent;
-width: 0;}
-
-/*burger menu after click on button burger*/
-li::after{
-  content: "";
-  display: block;
-  margin:0 auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 7vw;
-  height: 1px;
-  background-color:#FCF3A6;
-
-}
-
-li:last-child::after{
-  display: none;
-}
-a:hover,
-a:focus {
-  font-weight: bold;
-}
-
+  li:last-child::after {
+    display: none;
+  }
+  a:hover,
+  a:focus {
+    font-weight: bold;
+  }
 }
