@@ -18,10 +18,10 @@ export default function HomeMain() {
       >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/results/news" element={<News />} />
-          <Route path="/results/music" element={<Music />} />
-          <Route path="/results/images" element={<Images />} />
-          <Route path="/results/receipts" element={<Receipts />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/images" element={<Images />} />
+          <Route path="/receipts" element={<Receipts />} />
         </Routes>
       </NewsContext.Provider>
     </main>

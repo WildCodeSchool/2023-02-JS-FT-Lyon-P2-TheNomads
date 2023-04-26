@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import styles from "./Home.module.css";
+import Footer from "../../Footer";
 import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
@@ -75,7 +76,7 @@ export default function Home() {
       </div>
       {countryEmoji && (
         <div className={styles.cardContainer}>
-          <Link to="/results/news">
+          <Link to="/news">
             <CardInformation
               countryCode={countryCode}
               changeInput={changeInput}
@@ -83,6 +84,7 @@ export default function Home() {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

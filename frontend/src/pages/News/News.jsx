@@ -1,7 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import NewsContext from "../../contexts/NewsContext";
 import Header from "../../Header";
+
 import styles from "./News.module.css";
+import Footer from "../../Footer";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -36,6 +38,7 @@ export default function News() {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
