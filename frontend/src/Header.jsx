@@ -17,16 +17,16 @@ export default function Header() {
             <NavLink to="/">Home </NavLink>
           </li>
           <li>
-            <NavLink to="/results/news">News</NavLink>
+            <NavLink to="/news">News</NavLink>
           </li>
           <li>
-            <NavLink to="/results/music">Music</NavLink>
+            <NavLink to="/music">Music</NavLink>
           </li>
           <li>
-            <NavLink to="/results/images">Pictures</NavLink>
+            <NavLink to="/images">Pictures</NavLink>
           </li>
           <li>
-            <NavLink to="/results/receipts">Recipes</NavLink>
+            <NavLink to="/receipts">Recipes</NavLink>
           </li>
         </ul>
         <button
