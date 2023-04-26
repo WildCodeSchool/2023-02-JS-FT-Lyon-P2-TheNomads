@@ -20,9 +20,9 @@ export default function cardInformation({ countryCode, changeInput }) {
   }, [changeInput]);
   return (
     <div className={styles.cardInformation}>
-      <div className={styles.newsContainer}>
+      <div>
         {news && (
-          <div className={styles.displayNew} style={{ padding: "15px" }}>
+          <div className={styles.displayNew}>
             <h2>{news.title}</h2>
             <h2>{news.content}</h2>
             <h3>Author: {news.author}</h3>

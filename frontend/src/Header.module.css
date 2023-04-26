@@ -1,14 +1,11 @@
-/**{
-box-shadow: 0 0 0 3px red inset;
-}*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 /*Navbar desktop sreen*/
 /*NavBar mobile*/ 
 
+@media screen and (max-width : 700px) {
+  
 
-  body{
-    background-color: #FCF3A6;
-  }
   .headerLogo{
     display: flex;
     position: absolute;
@@ -17,14 +14,7 @@ box-shadow: 0 0 0 3px red inset;
   left: 150px;
   top: -50px;
   }
-  .logo{
-  display: block;
-  width: 35px;
-  position: absolute;
-  left: 10px;
-  z-index: 1;
 
-}
 
 .navbarlinks{
 position: absolute;
@@ -33,7 +23,7 @@ right: 100vw;
  margin: 0;
  padding: 50px;
  list-style-type: none;
- background-color: #1C5253;
+ background-color: #BD9479;
  width: 200px; 
  height: 400px;
  display: flex;
@@ -52,25 +42,31 @@ right: 100vw;
 
 }
 
-.shownav{
-  background-color: green;
-}
+
 a{
   text-decoration: none;
-  color: #FCF3A6;
+  color: #151B11;
   font-size: 22px;
 padding:20px;
 
 }
 
 /*button burger*/
-.button{
+button{
 display: block;
 position: fixed;
-top: 1rem;
+  height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    top: 1rem;
 left: 1rem;
+  }
 
-}
+
+
+
 .button:hover{
   cursor: pointer;
 
@@ -84,7 +80,7 @@ height: 3px;
 position: relative;
 border-radius: 3px;
 transition:all .3s ease-in-out;
-background-color: #1C5253;
+background-color: #BD9479;
 
 }
 
@@ -93,6 +89,7 @@ background-color: #1C5253;
   content: "";
   position: absolute;
   left: 0px;
+  background-color: #BD9479 ;
 
 
 }
@@ -104,11 +101,11 @@ background-color: #1C5253;
 }
 .shownav .burgerbar::before{
 transform: rotate(45deg);
-background-color: #FCF3A6;
+background-color: #151B11;
 }
 
 .shownav .burgerbar:after{
-  background-color: #FCF3A6;
+  background-color: #151B11;
   transform: rotate(-45deg);}
 
  .shownav .burgerbar{
@@ -124,7 +121,7 @@ width: 0;}
   margin-top: 20px;
   width: 7vw;
   height: 1px;
-  background-color:#FCF3A6;
+  background-color:#151B11;
 
 }
 
@@ -136,18 +133,13 @@ a:focus {
 font-weight: bold;
  
 }
-
-@media screen and (min-width: 700px) {
-  
-
-  
-
-body{
-  background-color: #FCF3A6;
 }
+@media screen and (min-width: 700px) {
+
+
 
 .navbarlinks{
-    background-color: #1C5253;
+    background-color: #BD9479;
     Width: 500px;
     Height:55px;
     border-radius:10px;
@@ -165,7 +157,7 @@ body{
 
 
 .headerLinks a{
-   color: #FCF3A6;
+   color: #151B11;
    text-decoration: none;
 }
 
@@ -178,23 +170,17 @@ a{
     text-decoration: none;
     transition: all 0.5s ease-out;
 }
-    
+    /*
 a:hover,
 a:focus {
-  background-color: #FCF3A6;
-  color:#1C5253;
+  background-color: #151B11;
+  color:#BD9479;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+*/
 
-.button{
-height: 40px;
-  width: 40px;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-}
 
 .headerLogo{
   display: flex;

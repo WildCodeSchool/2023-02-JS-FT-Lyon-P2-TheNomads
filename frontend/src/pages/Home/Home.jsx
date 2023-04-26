@@ -4,6 +4,7 @@ import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
+import logo from "../../assets/logo2.png";
 
 export default function Home() {
   const [countryInput, setCountryInput] = useState("Select your country");
@@ -33,7 +34,10 @@ export default function Home() {
   return (
     <div className={styles.mainContainer}>
       {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
-      <h1>HOME</h1>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.homeSubTitle}>Do you miss your country ?</h2>
+        <h1 className={styles.homeTitle}>This website is made for you !</h1>
+      </div>
       <div className={styles.searchBar}>
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
           className={styles.displayCountryName}
@@ -80,6 +84,7 @@ export default function Home() {
               changeInput={changeInput}
             />
           </Link>
+
           <Link to="/results/receipts">
             <CardRecipes
               countryCode={countryCode}
@@ -89,6 +94,7 @@ export default function Home() {
           </Link>
         </div>
       )}
+      <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
   );
 }

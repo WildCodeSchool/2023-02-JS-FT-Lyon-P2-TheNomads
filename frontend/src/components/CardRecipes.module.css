@@ -1,13 +1,46 @@
 /**{
-    box-shadow: 0 0 0 3px red inset;
 }*/
-.recipesContainer img{
-    width: 100px;
-    height: 100px;
+.cardRecipes img{
+    width: 150px;
+    height: 150px;
     display: flex;
 }
 
 .cardRecipes{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color:#BD9479;
+    color: #151B11;
+    font-size: 0.6em;
+    opacity: 0.8;
+    width: 100%;
+    padding: 10px;
 }
+.cardRecipes::before{
+    content: "Recipes";
+    font-size: 20px;
+    font-weight: bold;
+}
+.cardRecipes:hover,
+.cardRecipes:focus {
+  color: #151B11;
+  background-color:#BD9479;
+  opacity: 1;
+  font-weight: bold;
+  transition: all .3s ease;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+}
+  
+ 
+  @media screen and (min-width:700px){
+
+    .cardRecipes{
+        font-size: .8em;
+
+    }
+  } 
+  
+ 
