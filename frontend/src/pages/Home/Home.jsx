@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       {countryEmoji && (
         <div className={styles.cardContainer}>
-          <Link to="/results/news">
+          <Link to="/news">
             <CardInformation
               countryCode={countryCode}
               changeInput={changeInput}
