@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-/**{box-shadow: 0 0 0 3px red inset;}*/
 
 * {
   margin: 0;
@@ -45,7 +44,7 @@ top: -20px;
   text-align: center;
   font-size: 2rem;
   padding-left: 15px;
-  margin-top:280px;
+  margin-top:240px;
   margin-bottom: 10px;
   border-radius: 10px;
   font-family: 'Roboto', sans-serif;
@@ -62,8 +61,8 @@ top: -20px;
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 295px;
   right: 15px;
+  top: 255px;
 
   border-top: 20px solid #151B11;
   border-left: 20px solid transparent;
