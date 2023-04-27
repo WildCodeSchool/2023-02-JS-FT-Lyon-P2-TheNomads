@@ -7,82 +7,57 @@ import Footer from "../../Footer";
 import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
-  const { setCountryInformation } = useContext(NewsContext);
-
-  const [countryInput, setCountryInput] = useState("Select your country");
-  const [countryEmoji, setCountryEmoji] = useState(null);
+  const { country, setCountry } = useContext(NewsContext);
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
-  const [countryCode, setCountryCode] = useState();
-  const [countryFlag, setCountryFlag] = useState();
-
-  const changeInput = (name, emoji, code, image) => {
-    setCountryInformation(code);
-    // setselectedCountry({ name, emoji, code, image });
-    setCountryInput(name);
-    setCountryEmoji(emoji);
-    setCountryCode(code);
-    setCountryFlag(image);
-  };
 
   const handleDropDownMenu = () => {
     setShowDropDownMenu(!dropDownMenu);
   };
 
-  const handleKeyUp = (event) => {
+  const handleKeyUp = (event, countrySelected) => {
     if (event.key === "Enter") {
-      setShowDropDownMenu(!dropDownMenu);
+      setCountry(countrySelected);
     }
   };
   return (
     <div className={styles.mainContainer}>
-      {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
-      <h1>HOME</h1>
+      {/* {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />} */}
       <div className={styles.searchBar}>
         <div
           className={styles.displayCountryName}
           placeholder="Select your country"
           onChange={(e) => {
-            setCountryInput(e.target.value);
+            setCountry(e.target.value);
           }}
           onClick={handleDropDownMenu}
           onKeyUp={(e) => handleKeyUp(e)}
           role="button"
           tabIndex="0"
         >
-          {countryInput}
-          {countryEmoji}
           <div className={styles.buttonDropDownMenu} />
         </div>
         {dropDownMenu && (
           <div className={styles.dropDownMenu}>
             <ul>
-              {countries.map((country) => (
+              {countries.map((countrySelected) => (
                 <li // eslint-disable-line
+                  key={countrySelected.id}
                   className={styles.countryOption}
-                  onKeyUp={(e) => handleKeyUp(e)}
-                  onClick={() =>
-                    changeInput(
-                      country.name,
-                      country.emoji,
-                      country.code,
-                      country.image
-                    )
-                  }
+                  onKeyUp={(e) => handleKeyUp(e, countrySelected)}
+                  onClick={() => setCountry(countrySelected)}
                 >
-                  {country.name} {country.emoji}
+                  {countrySelected.name} {countrySelected.emoji}
                 </li>
               ))}
             </ul>
           </div>
         )}
+        {/* {console.log(country)} */}
       </div>
-      {countryEmoji && (
+      {country && (
         <div className={styles.cardContainer}>
           <Link to="/news">
-            <CardInformation
-              countryCode={countryCode}
-              changeInput={changeInput}
-            />
+            <CardInformation />
           </Link>
         </div>
       )}

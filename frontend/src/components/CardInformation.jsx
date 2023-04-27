@@ -1,18 +1,18 @@
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardInformation.module.css";
+import NewsContext from "../contexts/NewsContext";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
-export default function cardInformation({ countryCode, changeInput }) {
+export default function cardInformation() {
   const [news, setNews] = useState(null);
-
-  // const notify = () => toast("Error while loading data");
+  const { country } = useContext(NewsContext);
 
   const newsData = () => {
     fetch(
-      `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=${NEWS_API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=${country.code}&apiKey=${NEWS_API_KEY}`
     )
       .then((res) => res.json())
       .then((response) => setNews(response.articles[0]))
@@ -29,10 +29,9 @@ export default function cardInformation({ countryCode, changeInput }) {
         })
       );
   };
-  // .then((response) => console.log(response));
   useEffect(() => {
     newsData();
-  }, [changeInput]);
+  }, [country]);
   return (
     <>
       <ToastContainer />
