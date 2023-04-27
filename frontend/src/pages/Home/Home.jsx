@@ -38,7 +38,7 @@ export default function Home() {
       {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
       <h1>HOME</h1>
       <div className={styles.searchBar}>
-        <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+        <div
           className={styles.displayCountryName}
           placeholder="Select your country"
           onChange={(e) => {
@@ -46,6 +46,8 @@ export default function Home() {
           }}
           onClick={handleDropDownMenu}
           onKeyUp={(e) => handleKeyUp(e)}
+          role="button"
+          tabIndex="0"
         >
           {countryInput}
           {countryEmoji}
