@@ -1,13 +1,32 @@
+/* *{
+  box-shadow: 0 0 0 3px red inset;
+} */
+
 .newsContainer {
-  background-color: #1D5254;
-  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   padding: 10px;
-  border-radius: 10px;
   margin-top: 130px
 }
 .news {
-  background-color: #f9f1ac;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin:  10px auto;
+  border: 1px solid black;
   border-radius: 10px;
-  margin: 20px;
+  background-color: aliceblue;
+  padding: 10px;
+  
+  
+
 }
+
+a{
+  cursor: pointer;
+}
+
+/* .news::before{
+  content: "My Title" 
+} */
