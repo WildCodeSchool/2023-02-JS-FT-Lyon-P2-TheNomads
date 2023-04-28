@@ -26,7 +26,7 @@ export default function Header() {
             <NavLink to="/images">Pictures</NavLink>
           </li>
           <li className={styles.headerLinks}>
-            <NavLink to="/receipts">Recipes</NavLink>
+            <NavLink to="/recipes">Recipes</NavLink>
           </li>
         </ul>
         <button
