@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
@@ -6,8 +6,11 @@ import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
 import Footer from "../../Footer";
 import logo from "../../assets/logo2.png";
+import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
+  const { setCountryInformation } = useContext(NewsContext);
+
   const [countryInput, setCountryInput] = useState("Select your country");
   const [countryEmoji, setCountryEmoji] = useState(null);
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
@@ -16,6 +19,8 @@ export default function Home() {
   const [countryFood, setCountryFood] = useState();
 
   const changeInput = (name, emoji, food, code, image) => {
+    setCountryInformation(code);
+    // setselectedCountry({ name, emoji, code, image });
     setCountryInput(name);
     setCountryEmoji(emoji);
     setCountryCode(code);
@@ -40,7 +45,7 @@ export default function Home() {
         <h1 className={styles.homeTitle}>This website is made for you !</h1>
       </div>
       <div className={styles.searchBar}>
-        <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+        <div
           className={styles.displayCountryName}
           placeholder="Select your country"
           onChange={(e) => {
@@ -48,6 +53,8 @@ export default function Home() {
           }}
           onClick={handleDropDownMenu}
           onKeyUp={(e) => handleKeyUp(e)}
+          role="button"
+          tabIndex="0"
         >
           {countryInput}
           {countryEmoji}
