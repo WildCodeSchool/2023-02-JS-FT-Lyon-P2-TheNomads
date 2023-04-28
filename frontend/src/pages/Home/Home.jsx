@@ -4,6 +4,7 @@ import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
+import Footer from "../../Footer";
 import logo from "../../assets/logo2.png";
 
 export default function Home() {
@@ -78,7 +79,7 @@ export default function Home() {
       </div>
       {countryEmoji && (
         <div className={styles.cardContainer}>
-          <Link to="/results/news">
+          <Link to="/news">
             <CardInformation
               countryCode={countryCode}
               changeInput={changeInput}
@@ -94,6 +95,7 @@ export default function Home() {
           </Link>
         </div>
       )}
+      <Footer />
       <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
   );
