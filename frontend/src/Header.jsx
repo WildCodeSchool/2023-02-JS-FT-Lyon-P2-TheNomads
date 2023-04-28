@@ -13,19 +13,19 @@ export default function Header() {
     <header>
       <nav className={showLinks ? styles.shownav : styles.hidenav}>
         <ul className={styles.navbarlinks}>
-          <li>
+          <li className={styles.headerLinks}>
             <NavLink to="/">Home </NavLink>
           </li>
-          <li>
+          <li className={styles.headerLinks}>
             <NavLink to="/news">News</NavLink>
           </li>
-          <li>
+          <li className={styles.headerLinks}>
             <NavLink to="/music">Music</NavLink>
           </li>
-          <li>
+          <li className={styles.headerLinks}>
             <NavLink to="/images">Pictures</NavLink>
           </li>
-          <li>
+          <li className={styles.headerLinks}>
             <NavLink to="/receipts">Recipes</NavLink>
           </li>
         </ul>
@@ -37,7 +37,7 @@ export default function Header() {
           <span className={styles.burgerbar}> </span>
         </button>
       </nav>
-      <img className={styles.logo} src={logo} alt="Logo" />
+      <img className={styles.headerLogo} src={logo} alt="Logo" />
     </header>
   );
 }

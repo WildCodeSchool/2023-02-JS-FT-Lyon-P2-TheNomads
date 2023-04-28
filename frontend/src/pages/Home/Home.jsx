@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
+import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
 import Footer from "../../Footer";
+import logo from "../../assets/logo2.png";
 
 export default function Home() {
   const [countryInput, setCountryInput] = useState("Select your country");
@@ -11,12 +13,14 @@ export default function Home() {
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
   const [countryCode, setCountryCode] = useState();
   const [countryFlag, setCountryFlag] = useState();
+  const [countryFood, setCountryFood] = useState();
 
-  const changeInput = (name, emoji, code, image) => {
+  const changeInput = (name, emoji, food, code, image) => {
     setCountryInput(name);
     setCountryEmoji(emoji);
     setCountryCode(code);
     setCountryFlag(image);
+    setCountryFood(food);
   };
 
   const handleDropDownMenu = () => {
@@ -31,7 +35,10 @@ export default function Home() {
   return (
     <div className={styles.mainContainer}>
       {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
-      <h1>HOME</h1>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.homeSubTitle}>Do you miss your country ?</h2>
+        <h1 className={styles.homeTitle}>This website is made for you !</h1>
+      </div>
       <div className={styles.searchBar}>
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
           className={styles.displayCountryName}
@@ -57,6 +64,7 @@ export default function Home() {
                     changeInput(
                       country.name,
                       country.emoji,
+                      country.food,
                       country.code,
                       country.image
                     )
@@ -77,9 +85,18 @@ export default function Home() {
               changeInput={changeInput}
             />
           </Link>
+
+          <Link to="/results/receipts">
+            <CardRecipes
+              countryCode={countryCode}
+              changeInput={changeInput}
+              countryFood={countryFood}
+            />
+          </Link>
         </div>
       )}
       <Footer />
+      <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
   );
 }
