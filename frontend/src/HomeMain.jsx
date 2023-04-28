@@ -9,12 +9,11 @@ import Music from "./pages/Music/Music";
 import NewsContext from "./contexts/NewsContext";
 
 export default function HomeMain() {
-  const [countryInformation, setCountryInformation] = useState();
+  const [country, setCountry] = useState(null);
 
   return (
     <main>
-      <NewsContext.Provider
-        value={{ countryInformation, setCountryInformation }}// eslint-disable-line
+      <NewsContext.Provider  value={{ country, setCountry }} //eslint-disable-line
       >
         <Routes>
           <Route path="/" element={<Home />} />

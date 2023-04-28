@@ -1,22 +1,20 @@
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import NewsContext from "../../contexts/NewsContext";
-import Header from "../../Header";
-
 import styles from "./News.module.css";
+import Header from "../../Header";
 import Footer from "../../Footer";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
 export default function News() {
   const [news, setNews] = useState(null);
-
-  const { countryInformation } = useContext(NewsContext);
+  const { country } = useContext(NewsContext);
 
   const newsData = () => {
     fetch(
-      `https://newsapi.org/v2/top-headlines?country=${countryInformation}&apiKey=${NEWS_API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=${country.code}&apiKey=${NEWS_API_KEY}`
     )
       .then((res) => res.json())
       .then((response) => setNews(response.articles))
@@ -35,13 +33,12 @@ export default function News() {
   };
   useEffect(() => {
     newsData();
-  }, []);
-  // console.log("this", news);
+  }, [country]);
   return (
     <div>
       <Header />
       <ToastContainer />
-      {news && (
+      {country && (
         <div className={styles.newsContainer}>
           {news &&
             news.map((item, index) => (

@@ -9,37 +9,20 @@ import logo from "../../assets/logo2.png";
 import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
-  const { setCountryInformation } = useContext(NewsContext);
-
-  const [countryInput, setCountryInput] = useState("Select your country");
-  const [countryEmoji, setCountryEmoji] = useState(null);
+  const { country, setCountry } = useContext(NewsContext);
   const [dropDownMenu, setShowDropDownMenu] = useState(false);
-  const [countryCode, setCountryCode] = useState();
-  const [countryFlag, setCountryFlag] = useState();
-  const [countryFood, setCountryFood] = useState();
-
-  const changeInput = (name, emoji, food, code, image) => {
-    setCountryInformation(code);
-    // setselectedCountry({ name, emoji, code, image });
-    setCountryInput(name);
-    setCountryEmoji(emoji);
-    setCountryCode(code);
-    setCountryFlag(image);
-    setCountryFood(food);
-  };
 
   const handleDropDownMenu = () => {
     setShowDropDownMenu(!dropDownMenu);
   };
 
-  const handleKeyUp = (event) => {
+  const handleKeyUp = (event, countrySelected) => {
     if (event.key === "Enter") {
-      setShowDropDownMenu(!dropDownMenu);
+      setCountry(countrySelected);
     }
   };
   return (
     <div className={styles.mainContainer}>
-      {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />}
       <div className={styles.titleContainer}>
         <h2 className={styles.homeSubTitle}>Do you miss your country ?</h2>
         <h1 className={styles.homeTitle}>This website is made for you !</h1>
@@ -49,55 +32,46 @@ export default function Home() {
           className={styles.displayCountryName}
           placeholder="Select your country"
           onChange={(e) => {
-            setCountryInput(e.target.value);
+            setCountry(e.target.value);
           }}
           onClick={handleDropDownMenu}
           onKeyUp={(e) => handleKeyUp(e)}
           role="button"
           tabIndex="0"
         >
-          {countryInput}
-          {countryEmoji}
+          Select your country
           <div className={styles.buttonDropDownMenu} />
         </div>
         {dropDownMenu && (
           <div className={styles.dropDownMenu}>
             <ul>
-              {countries.map((country) => (
-                <li // eslint-disable-line
+              {countries.map((countrySelected) => (
+                <li
+                  key={countrySelected.id}
                   className={styles.countryOption}
-                  onKeyUp={(e) => handleKeyUp(e)}
-                  onClick={() =>
-                    changeInput(
-                      country.name,
-                      country.emoji,
-                      country.food,
-                      country.code,
-                      country.image
-                    )
-                  }
+                  onKeyUp={(e) => handleKeyUp(e, countrySelected)}
+                  onClick={() => setCountry(countrySelected)}
+                  role="menuitem"
+                  tabIndex="0"
                 >
-                  {country.name} {country.emoji}
+                  {countrySelected.name} {countrySelected.emoji}
                 </li>
               ))}
             </ul>
           </div>
         )}
       </div>
-      {countryEmoji && (
+      {country && (
         <div className={styles.cardContainer}>
           <Link to="/news">
-            <CardInformation
-              countryCode={countryCode}
-              changeInput={changeInput}
-            />
+            <CardInformation />
           </Link>
 
           <Link to="/results/receipts">
             <CardRecipes
-              countryCode={countryCode}
-              changeInput={changeInput}
-              countryFood={countryFood}
+              countryCode={country.code}
+              changeInput={country.name}
+              countryFood={country.food}
             />
           </Link>
         </div>
