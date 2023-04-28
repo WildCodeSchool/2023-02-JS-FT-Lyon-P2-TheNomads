@@ -21,7 +21,6 @@ export default function Home() {
   };
   return (
     <div className={styles.mainContainer}>
-      {/* {countryFlag && <img className={styles.flag} src={countryFlag} alt="" />} */}
       <div className={styles.searchBar}>
         <div
           className={styles.displayCountryName}
@@ -34,6 +33,7 @@ export default function Home() {
           role="button"
           tabIndex="0"
         >
+          Select your country
           <div className={styles.buttonDropDownMenu} />
         </div>
         {dropDownMenu && (
