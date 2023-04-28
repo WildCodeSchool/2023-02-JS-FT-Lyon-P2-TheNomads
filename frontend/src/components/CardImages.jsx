@@ -1,6 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
 import { createClient } from "pexels";
-// import { ToastContainer, toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardImages.module.css";
 import NewsContext from "../contexts/NewsContext";
