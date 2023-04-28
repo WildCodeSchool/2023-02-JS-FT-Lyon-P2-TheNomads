@@ -1,11 +1,11 @@
 import Header from "../../Header";
 import Footer from "../../Footer";
 
-export default function Receipts() {
+export default function Recipes() {
   return (
     <>
       <Header />
-      <div> RECEIPTS </div>
+      <div> RECIPES </div>
       <Footer />
     </>
   );
