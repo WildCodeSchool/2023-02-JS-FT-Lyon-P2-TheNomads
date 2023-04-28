@@ -5,10 +5,10 @@ import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardImages.module.css";
 import NewsContext from "../contexts/NewsContext";
 
+const IMAGES_API_KEY = import.meta.env.VITE_IMAGES_API_KEY;
+
 export default function CardImage() {
-  const client = createClient(
-    "jNmeA0qW0qIEb55RRxXx7J5GqakwzQjwRpiSSqXev6pYUrufkquH0e2V"
-  );
+  const client = createClient(`${IMAGES_API_KEY}`);
 
   const { country } = useContext(NewsContext);
   // {console.log(props)}
