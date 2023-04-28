@@ -36,7 +36,7 @@ export default function cardInformation() {
     <>
       <ToastContainer />
       <div className={styles.cardInformation}>
-        <div className={styles.newsContainer}>
+        <div>
           {news && (
             <div className={styles.displayNew} style={{ padding: "15px" }}>
               <h2>{news.title}</h2>
