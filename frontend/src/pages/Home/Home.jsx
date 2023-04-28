@@ -2,8 +2,10 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
+import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
 import Footer from "../../Footer";
+import logo from "../../assets/logo2.png";
 import NewsContext from "../../contexts/NewsContext";
 
 export default function Home() {
@@ -21,6 +23,10 @@ export default function Home() {
   };
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.homeSubTitle}>Do you miss your country ?</h2>
+        <h1 className={styles.homeTitle}>This website is made for you !</h1>
+      </div>
       <div className={styles.searchBar}>
         <div
           className={styles.displayCountryName}
@@ -40,11 +46,13 @@ export default function Home() {
           <div className={styles.dropDownMenu}>
             <ul>
               {countries.map((countrySelected) => (
-                <li // eslint-disable-line
+                <li
                   key={countrySelected.id}
                   className={styles.countryOption}
                   onKeyUp={(e) => handleKeyUp(e, countrySelected)}
                   onClick={() => setCountry(countrySelected)}
+                  role="menuitem"
+                  tabIndex="0"
                 >
                   {countrySelected.name} {countrySelected.emoji}
                 </li>
@@ -52,16 +60,24 @@ export default function Home() {
             </ul>
           </div>
         )}
-        {/* {console.log(country)} */}
       </div>
       {country && (
         <div className={styles.cardContainer}>
           <Link to="/news">
             <CardInformation />
           </Link>
+
+          <Link to="/results/receipts">
+            <CardRecipes
+              countryCode={country.code}
+              changeInput={country.name}
+              countryFood={country.food}
+            />
+          </Link>
         </div>
       )}
       <Footer />
+      <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
   );
 }
