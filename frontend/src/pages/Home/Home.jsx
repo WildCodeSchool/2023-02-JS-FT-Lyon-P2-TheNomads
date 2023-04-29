@@ -8,6 +8,7 @@ import Footer from "../../Footer";
 import logo from "../../assets/logo2.png";
 import NewsContext from "../../contexts/NewsContext";
 import CardImage from "../../components/CardImages";
+import CardMusic from "../../components/CardMusic";
 
 export default function Home() {
   const { country, setCountry } = useContext(NewsContext);
@@ -64,6 +65,10 @@ export default function Home() {
       </div>
       {country && (
         <div className={styles.cardContainer}>
+          <Link to="/music">
+            <CardMusic />
+          </Link>
+
           <Link to="/news">
             <CardInformation />
           </Link>
