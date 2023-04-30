@@ -41,22 +41,17 @@ export default function Images() {
     handleClick();
   }, [country]);
 
-  // console.log("Gr", images[0])
   return (
     <div>
       <Header />
       <ToastContainer />
       <div className={styles.imagesContainerBox}>
-        {
-          images &&
-            images.map((image) => (
-              // console.log(image.src.original)
-              <figure className={styles.figure}>
-                <img src={image.src.original} alt="Photos" width="400px" />
-              </figure>
-            ))
-          // <img src={images[0].src.original} alt="Photos" width="400px" />
-        }
+        {images &&
+          images.map((image) => (
+            <figure className={styles.figure}>
+              <img src={image.src.original} alt="Photos" width="400px" />
+            </figure>
+          ))}
       </div>
       <Footer />
     </div>

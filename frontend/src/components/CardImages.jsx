@@ -20,7 +20,7 @@ export default function CardImage() {
     client.photos
       .search({ query, per_page: quantityOfImages })
       .then((photos) => {
-        setImages(photos);
+        setImages(photos.photos);
       })
       .catch((err) =>
         toast.error(`Error while loading data ${err}`, {
@@ -42,39 +42,12 @@ export default function CardImage() {
     <>
       <ToastContainer />
       <div className={styles.imagesContainer}>
-        <div className={styles.imageCard}>
-          <figure>
-            {images && (
-              <img
-                src={images.photos[0].src.original}
-                alt="Photos"
-                width="400px"
-              />
-            )}
-          </figure>
-        </div>
-        <div className={styles.imageCard}>
-          <figure>
-            {images && (
-              <img
-                src={images.photos[1].src.original}
-                alt="Photos"
-                width="400px"
-              />
-            )}
-          </figure>
-        </div>
-        <div className={styles.imageCard}>
-          <figure>
-            {images && (
-              <img
-                src={images.photos[2].src.original}
-                alt="Photos"
-                width="400px"
-              />
-            )}
-          </figure>
-        </div>
+        {images &&
+          images.map((image) => (
+            <div className={styles.imageCard}>
+              <img src={image.src.original} alt="Photos" width="400px" />
+            </div>
+          ))}
       </div>
     </>
   );
