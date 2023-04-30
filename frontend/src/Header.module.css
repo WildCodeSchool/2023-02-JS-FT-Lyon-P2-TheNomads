@@ -1,18 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-/*Navbar desktop sreen*/
 /*NavBar mobile*/ 
 
 @media screen and (max-width : 700px) {
   
 
   .headerLogo{
-    display: flex;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 150px;
-    top: -50px;
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+ 
   }
 
 
@@ -31,6 +29,7 @@ right: 100vw;
  justify-content: space-between;
  border-radius:10px;
  transition: all .3s ease-out;
+ z-index: 1;
 
 }
 
@@ -59,6 +58,7 @@ position: fixed;
     color: inherit;
     top: 1rem;
 left: 1rem;
+z-index: 2;
   }
 
 
@@ -133,6 +133,9 @@ font-weight: bold;
 }
 @media screen and (min-width: 700px) {
 
+.button{
+  display: none;
+}
 
 .navbarlinks{
     background-color: #BD9479;
@@ -177,14 +180,11 @@ font-weight: bold;
 
 
 
-
 .headerLogo{
-  display: flex;
-  position: absolute;
-width: 400px;
-height: 400px;
-left: 536px;
-top: -70px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin : auto;
 }
 }
 

@@ -39,13 +39,11 @@ export default function News() {
       <Header />
       <ToastContainer />
       {country && (
-        <div className={styles.newsContainer}>
+        <div className={styles.newsPage}>
           {news &&
             news.map((item, index) => (
               <div key={item.id} className={styles.news}>
                 <h1>{news[index].title}</h1>
-                <p>{news[index].content}</p>
-                <p>{news[index].author}</p>
                 <p>
                   <a href={news[index].url} target="_blank" rel="noreferrer">
                     Click to see more
