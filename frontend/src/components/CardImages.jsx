@@ -1,67 +1,53 @@
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import { createClient } from "pexels";
-// import { ToastContainer, toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardImages.module.css";
 import NewsContext from "../contexts/NewsContext";
 
+const IMAGES_API_KEY = import.meta.env.VITE_IMAGES_API_KEY;
+
 export default function CardImage() {
-  const client = createClient(
-    "jNmeA0qW0qIEb55RRxXx7J5GqakwzQjwRpiSSqXev6pYUrufkquH0e2V"
-  );
+  const client = createClient(`${IMAGES_API_KEY}`);
 
   const { country } = useContext(NewsContext);
-  // {console.log(props)}
-  // const [country, setCountry] = useState("");
-  const [img, setImg] = useState("");
-  const [img2, setImg2] = useState("");
-  const [img3, setImg3] = useState("");
-  // const [img3, setImg3] = useState("");
-  const query = country.name;
 
+  const [images, setImages] = useState(null);
+
+  const query = country.name;
+  const quantityOfImages = 3;
   const handleClick = () => {
-    client.photos.search({ query, per_page: 3 }).then((photos) => {
-      setImg(photos.photos[0].src.original);
-      setImg2(photos.photos[1].src.original);
-      setImg3(photos.photos[2].src.original);
-    });
+    client.photos
+      .search({ query, per_page: quantityOfImages })
+      .then((photos) => {
+        setImages(photos.photos);
+      })
+      .catch((err) =>
+        toast.error(`Error while loading data ${err}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      );
   };
   useEffect(() => {
     handleClick();
   }, [country]);
   return (
     <>
-      {/* <ToastContainer /> */}
-      <div>
-        <div className={styles.imagesContainer}>
-          <div className={styles.imageCard}>
-            <figure>
-              {img.length > 0 ? (
-                <img src={img} alt="Photos" width="400px" />
-              ) : (
-                ""
-              )}
-            </figure>
-          </div>
-          <div className={styles.imageCard}>
-            <figure>
-              {img.length > 0 ? (
-                <img src={img2} alt="Photos" width="400px" />
-              ) : (
-                ""
-              )}
-            </figure>
-          </div>
-          <div className={styles.imageCard}>
-            <figure>
-              {img.length > 0 ? (
-                <img src={img3} alt="Photos" width="400px" />
-              ) : (
-                ""
-              )}
-            </figure>
-          </div>
-        </div>
+      <ToastContainer />
+      <div className={styles.imagesContainer}>
+        {images &&
+          images.map((image) => (
+            <div className={styles.imageCard}>
+              <img src={image.src.original} alt="Photos" width="400px" />
+            </div>
+          ))}
       </div>
     </>
   );
