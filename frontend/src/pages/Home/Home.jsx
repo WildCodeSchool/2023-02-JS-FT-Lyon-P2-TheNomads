@@ -7,6 +7,8 @@ import styles from "./Home.module.css";
 import Footer from "../../Footer";
 import logo from "../../assets/logo2.png";
 import NewsContext from "../../contexts/NewsContext";
+import CardImage from "../../components/CardImages";
+import CardMusic from "../../components/CardMusic";
 
 export default function Home() {
   const { country, setCountry } = useContext(NewsContext);
@@ -63,19 +65,28 @@ export default function Home() {
       </div>
       {country && (
         <div className={styles.cardContainer}>
+          <Link to="/music">
+            <CardMusic />
+          </Link>
+
           <Link to="/news">
             <CardInformation />
           </Link>
 
-          <Link to="/results/receipts">
+          <Link to="/recipes">
             <CardRecipes
               countryCode={country.code}
               changeInput={country.name}
               countryFood={country.food}
             />
           </Link>
+
+          <Link to="/images">
+            <CardImage />
+          </Link>
         </div>
       )}
+
       <Footer />
       <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
