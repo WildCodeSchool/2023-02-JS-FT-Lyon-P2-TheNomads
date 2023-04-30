@@ -1,41 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-/*Navbar desktop sreen*/
+/*Footer desktop sreen*/
 
 .foot {
-  background: #1c5253;
-  border-radius: 10px;
+ background-color: #151B11;
   width: 100%;
-  height: 104.1px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
   bottom: 0;
   position: fixed;
+  opacity: 0.9;
 }
 
-.contact {
-  color: #fcf3a6;
-  width: 60vh;
-  height: 5vh;
+.contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151B11;
+  color: #BD9479 ;
+  width: 20vh;
+  height: 30px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 34px;
-  margin-left: 5vh;
+  margin-right: 5vh;
   border-radius: 10px;
   transition: all 0.3s ease-out;
+  padding: 0;
 }
 
 .team {
-  color: #fcf3a6;
-  width: 15vh;
-  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151B11;
+  color: #BD9479 ;
+  width: 20vh;
+  height: 30px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   line-height: 34px;
   margin-right: 5vh;
   border-radius: 10px;
@@ -44,38 +55,31 @@
 
 .team:hover,
 .team:focus {
-  background-color: #fcf3a6;
-  color: #1c5253;
+  background-color: #BD9479;
+  color:#151B11;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.contact:hover,
-.contact:focus {
-  background-color: #fcf3a6;
-  color: #1c5253;
+.contact a:hover,
+.contact a:focus {
+  background-color: #BD9479;
+  color:#151B11;
   font-weight: bold;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/*NavBar mobile*/
+a{
+  cursor: pointer;
+}
+/*Footer mobile*/
 
 @media screen and (max-width: 700px) {
   .foot {
-    border-radius: 10px;
+    display: flex;
+    padding: 0;
+  
   }
 
-  .team:hover,
-  .team:focus {
-    font-weight: bold;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 100%;
-  }
 
-  .contact:hover,
-  .contact:focus {
-    font-weight: bold;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 100%;
-  }
 }

@@ -1,30 +1,94 @@
-/* *{
-  box-shadow: 0 0 0 3px red inset;
-} */
 
-.newsContainer {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+main{
+  background-image: url('https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_960_720.jpg');
+  background-size:cover;
+
+}
+.newsPage {
+
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  padding: 10px;
-  margin-top: 130px
+  font-family: 'Roboto', sans-serif;
+
+  
 }
 .news {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  margin:  10px auto;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: aliceblue;
-  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 250px;
+  margin:  20px auto;
+border-radius: 10px;
+  padding: 20px;
   overflow: hidden;
+  background-color:#BD9479;
+  color: #151B11;
+  font-size: 0.6em;
+  opacity: 0.8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.news::before{
+  font-size: 20px;
+  font-weight: bold;
+}
+.news:hover,
+.news:focus {
+color: #151B11;
+background-color:#BD9479;
+opacity: 1;
+font-weight: bold;
+transition: all 0.4s ease;
+box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
 }
 
 a{
   cursor: pointer;
 }
 
-/* .news::before{
-  content: "My Title" 
-} */
+.news a{
+color : #151B11;
+font-size: 2em;
+background-color: #BD9479;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+font-weight:  bold;
+padding: 5px;
+transition: all 0.5s ease;
+
+}
+
+
+.news a:hover,
+.news a:focus{
+  background-color: #151B11;
+  color:#BD9479;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.news h1{
+  padding: 10px;
+}
+
+@media screen and (min-width : 700px) {
+  
+  .newsPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .news{
+    width: 450px;
+    padding: 20px;
+    margin: 20px
+  }
+}

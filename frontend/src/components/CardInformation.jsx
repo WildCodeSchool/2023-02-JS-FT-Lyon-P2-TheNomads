@@ -41,7 +41,6 @@ export default function cardInformation() {
             <div className={styles.displayNew} style={{ padding: "15px" }}>
               <h2>{news.title}</h2>
               <h2>{news.content}</h2>
-              <h3>Author: {news.author}</h3>
             </div>
           )}
         </div>

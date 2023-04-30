@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Header.module.css";
-import logo from "./assets/logoexpat.png";
+import logo from "./assets/logo4.png";
 
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
