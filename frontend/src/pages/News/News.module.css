@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-main{
+.newsContainer{
   background-image: url('https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_960_720.jpg');
   background-size:cover;
 
