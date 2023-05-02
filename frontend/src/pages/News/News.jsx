@@ -35,7 +35,7 @@ export default function News() {
     newsData();
   }, [country]);
   return (
-    <div>
+    <div className={styles.newsContainer}>
       <Header />
       <ToastContainer />
       {country && (
