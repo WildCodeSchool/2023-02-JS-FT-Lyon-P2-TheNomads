@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.teampage {
+  background-image: url("../../assets/teamwork.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12vh;
+  font-family: "Roboto", sans-serif;
+  color: #bd9479;
+  font-size: 26px;
+  line-height: 160px;
+  margin-top: -20px;
+  text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #bd9479;
+  font-size: 26px;
+  text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.Jawad {
+  display: flex;
+  justify-content: center;
+}
+
+.Marcelo {
+  display: flex;
+  justify-content: center;
+}
+
+.Vanessa {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 700px) {
+  .team {
+    flex-direction: column;
+  }
+
+  .Marcelo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slogan {
+    padding-left: 10vh;
+  }
+}
