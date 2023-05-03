@@ -23,6 +23,11 @@ export default function Home() {
       setCountry(countrySelected);
     }
   };
+
+  const handleClick = (countrySelected) => {
+    handleDropDownMenu();
+    setCountry(countrySelected);
+  };
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
@@ -52,7 +57,7 @@ export default function Home() {
                   key={countrySelected.id}
                   className={styles.countryOption}
                   onKeyUp={(e) => handleKeyUp(e, countrySelected)}
-                  onClick={() => setCountry(countrySelected)}
+                  onClick={() => handleClick(countrySelected)}
                   role="menuitem"
                   tabIndex="0"
                 >
