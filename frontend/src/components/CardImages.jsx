@@ -42,12 +42,14 @@ export default function CardImage() {
     <>
       <ToastContainer />
       <div className={styles.imagesContainer}>
-        {images &&
-          images.map((image) => (
-            <div className={styles.imageCard}>
-              <img src={image.src.original} alt="Photos" width="400px" />
-            </div>
-          ))}
+        <div className={styles.picturesContainer}>
+          {images &&
+            images.map((image) => (
+              <div className={styles.imageCard}>
+                <img src={image.src.original} alt="Photos" width="400px" />
+              </div>
+            ))}
+        </div>
       </div>
     </>
   );

@@ -7,7 +7,6 @@ export default function CardMusic() {
 
   return (
     <div className={styles.musicContainer}>
-      <h1>Music</h1>
       <iframe
         title="deezer-widget"
         src={`https://widget.deezer.com/widget/auto/playlist/${country.playListNumber}`}
