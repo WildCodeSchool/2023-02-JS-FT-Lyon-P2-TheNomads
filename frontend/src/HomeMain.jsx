@@ -19,6 +19,7 @@ export default function HomeMain() {
   return (
     <main>
       <NewsContext.Provider value={countryWrapper}>
+        <ToastContainer />
         {country && <Header />}
         <Routes>
           <Route path="/" element={<Home />} />

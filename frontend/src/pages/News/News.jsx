@@ -34,7 +34,6 @@ export default function News() {
   }, [country]);
   return (
     <div className={styles.newsContainer}>
-      <ToastContainer />
       {country && (
         <div className={styles.newsPage}>
           {news &&
