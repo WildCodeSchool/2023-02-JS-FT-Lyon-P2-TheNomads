@@ -6,14 +6,13 @@
   box-sizing: border-box;
 }
 /*logo*/
-.homeLogo{
+.homeLogo {
   display: flex;
   position: absolute;
-width: 200px;
-height: 200px;
-left: -50px;
-top: -20px;
-
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    top: -20px;
 }
 /* Search bar */
 .searchBar {
@@ -22,7 +21,6 @@ top: -20px;
   align-items: center;
   justify-content: center;
   max-width: 600px;
-  /* min-width: 90%; */
   position: relative;
   margin: 10px auto;
   margin-left: 5px;
@@ -40,39 +38,36 @@ top: -20px;
   height: 3rem;
   width: 70vw;
   max-width: 600px;
-  /* min-width: 100%; */
   text-align: center;
   font-size: 2rem;
   padding-left: 15px;
   margin-top:240px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #151B11;
-  background-color: #BD9479;
+  color: #151b11;
+  background-color: #bd9479;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
 .buttonDropDownMenu {
-  /* background-color: rgb(0, 0, 0); */
   width: 30px;
   height: 30px;
   position: absolute;
   right: 15px;
   top: 255px;
 
-  border-top: 20px solid #151B11;
+  border-top: 20px solid #151b11;
   border-left: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 20px solid transparent;
+  
 }
 
 .dropDownMenu {
   width: 70vw;
-  /* min-width: 380px; */
   max-width: 600px;
   text-align: center;
   height: 200px;
@@ -81,28 +76,27 @@ top: -20px;
 }
 
 .countryOption {
-color:#151B11;
+  color: #151b11;
   list-style-type: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
- background-color: #BD9479;
- opacity: 0.8;
+  background-color: #bd9479;
+  opacity: 0.8;
 }
 
 .countryOption:hover {
-  background-color: #151B11;
-  color:#BD9479;
+  background-color: #151b11;
+  color: #bd9479;
 }
 
 .mainContainer {
-  background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130730_960_720.jpg') ;
-  background-size:cover;
-  display: flex;  
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130730_960_720.jpg");
+  background-size: cover;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;;
+  min-height: 100vh;
 }
-
 
 /*Results */
 .cardContainer {
@@ -115,72 +109,60 @@ color:#151B11;
   padding-bottom: 50px;
 }
 
-
-
-
 .flag {
   position: absolute;
   top: 0;
   right: 0;
   width: 150px;
   height: 100px;
-  
 }
 
-
 /*Titles*/
-.titleContainer{
+.titleContainer {
   display: flex;
   flex-direction: column;
   position: absolute;
   align-items: center;
   top: 150px;
 }
-.homeTitle{
-  font-family: 'Roboto', sans-serif;
-color:#BD9479;
-font-size: 26px;
-line-height: 160px;
-margin-top: -20px;
-	text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0,0,0,0.15);
-
+.homeTitle {
+  font-family: "Roboto", sans-serif;
+  color: #bd9479;
+  font-size: 26px;
+  line-height: 160px;
+  margin-top: -20px;
+  text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.homeSubTitle{
-color:#BD9479;
-font-size: 24px;
-margin-bottom: -10px;
-text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0,0,0,0.15);
-
+.homeSubTitle {
+  color: #bd9479;
+  font-size: 24px;
+  margin-bottom: -10px;
+  text-shadow: 4px 3px 0px #433b3b, 7px 4px 0px rgba(0, 0, 0, 0.15);
 }
-@media screen and (min-width:700px){
-  
-
-/*Titles*/
-.titleContainer{
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  top: 70px;
-
-}
-.homeTitle{
-  font-family: 'Roboto', sans-serif;
-color:#BD9479;
-line-height: 160px;
-letter-spacing: 3px;
-	text-shadow: 4px 3px 0px #433b3b, 9px 8px 0px rgba(0,0,0,0.15);
-  font-size : 5vw;
-
-}
-.homeSubTitle{
-color:#BD9479;
-letter-spacing: 3px;
-text-shadow: 4px 3px 0px #433b3b, 9px 8px 0px rgba(0,0,0,0.15);
-font-size: 3vw;
-
-}
+@media screen and (min-width: 700px) {
+  /*Titles*/
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 70px;
+  }
+  .homeTitle {
+    font-family: "Roboto", sans-serif;
+    color: #bd9479;
+    line-height: 160px;
+    letter-spacing: 3px;
+    text-shadow: 4px 3px 0px #433b3b, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    font-size: 5vw;
+  }
+  .homeSubTitle {
+    color: #bd9479;
+    letter-spacing: 3px;
+    text-shadow: 4px 3px 0px #433b3b, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    font-size: 3vw;
+  }
 
 /*logo*/
 .homeLogo{

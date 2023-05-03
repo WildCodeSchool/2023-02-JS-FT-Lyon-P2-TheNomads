@@ -5,7 +5,7 @@ import News from "./pages/News/News";
 import Recipes from "./pages/Recipes/Recipes";
 import Images from "./pages/Images/Images";
 import Music from "./pages/Music/Music";
-
+import Team from "./pages/Team/Team";
 import NewsContext from "./contexts/NewsContext";
 
 export default function HomeMain() {
@@ -22,6 +22,7 @@ export default function HomeMain() {
           <Route path="/music" element={<Music />} />
           <Route path="/images" element={<Images />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </NewsContext.Provider>
     </main>
