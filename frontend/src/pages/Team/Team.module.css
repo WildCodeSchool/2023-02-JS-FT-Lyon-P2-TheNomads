@@ -57,31 +57,6 @@ body {
   justify-content: center;
 }
 
-#zone3 {
-  width: 900px;
-  height: 500px;
-  background-image: url(../images/piste.svg);
-  margin: auto;
-  background-size: cover;
-  position: relative;
-  perspective: 600px;
-  perspective-origin: left top;
-}
-
-@keyframes raser {
-  from {
-  }
-  to {
-    transform: translateZ(600px);
-  }
-}
-#jet {
-  width: 5%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  animation: raser 10s 0s infinite linear;
-}
 
 @media screen and (max-width: 700px) {
   .team {
