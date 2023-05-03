@@ -41,6 +41,7 @@ export default function Images() {
 
   return (
     <div>
+      <ToastContainer />
       <div className={styles.imagesContainerBox}>
         {images &&
           images.map((image) => (

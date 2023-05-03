@@ -2,6 +2,13 @@
 /*NavBar mobile*/
 
 @media screen and (max-width: 700px) {
+
+  header {
+    display: flex;
+    position: absolute;
+    right: 0;
+    }
+
   .headerLogo {
     display: block;
     margin: auto;
@@ -121,6 +128,13 @@
     display: none;
   }
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bd9479ec;
+    /* border: 2px solid red; */
+
+  }
   .navbarlinks {
     background-color: #bd9479;
     width: 500px;

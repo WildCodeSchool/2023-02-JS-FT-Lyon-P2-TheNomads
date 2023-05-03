@@ -4,7 +4,7 @@ import countries from "../../assets/countriesList";
 import CardInformation from "../../components/CardInformation";
 import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
-// import logo from "../../assets/logo2.png";
+import logo from "../../assets/logo4.png";
 import NewsContext from "../../contexts/NewsContext";
 import CardImage from "../../components/CardImages";
 import CardMusic from "../../components/CardMusic";
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* <img className={styles.homeLogo} src={logo} alt="Logo" /> */}
+      <img className={styles.homeLogo} src={logo} alt="Logo" />
     </div>
   );
 }
