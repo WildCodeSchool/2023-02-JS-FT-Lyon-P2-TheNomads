@@ -19,7 +19,7 @@ function CardRecipes({ changeInput, countryFood }) {
     <div className={styles.cardRecipes}>
       <div className={styles.recipesContainer}>
         {recipe && (
-          <div className={styles.displayRecipes} style={{ padding: "15px" }}>
+          <div className={styles.displayRecipes}>
             <img src={recipe.strMealThumb} alt={recipe.strMeal} />
             <h2>{recipe.strMeal}</h2>
             <h3>{recipe.strInstructions}</h3>

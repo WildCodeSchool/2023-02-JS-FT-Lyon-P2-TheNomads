@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -101,12 +101,12 @@
 /*Results */
 .cardContainer {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  width: 320px;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
+  width: 80%;
+  padding-bottom: 50px;
 }
 
 .flag {
@@ -164,24 +164,27 @@
     font-size: 3vw;
   }
 
-  /*logo*/
-  .homeLogo {
-    display: flex;
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    left: -50px;
-    top: -50px;
-  }
-  /*Results */
-  .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-decoration: none;
-    justify-content: space-around;
-    font-family: "Roboto", sans-serif;
-    width: 620px;
-    margin: 10px;
-  }
+/*logo*/
+.homeLogo{
+  display: flex;
+  position: absolute;
+width: 400px;
+height: 400px;
+left: -50px;
+top: -50px;
+}
+/*Results */
+.cardContainer {
+display:grid;
+grid-template-columns: 400px 400px;
+justify-content: center;
+row-gap: 10px;
+column-gap: 10px;
+text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+width: 80%;
+
+
+}
+
 }
