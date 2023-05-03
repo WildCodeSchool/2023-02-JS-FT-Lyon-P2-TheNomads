@@ -5,6 +5,7 @@ import News from "./pages/News/News";
 import Receipts from "./pages/Receipts/Receipts";
 import Images from "./pages/Images/Images";
 import Music from "./pages/Music/Music";
+import Team from "./pages/Team/Team";
 
 import NewsContext from "./contexts/NewsContext";
 
@@ -13,7 +14,8 @@ export default function HomeMain() {
 
   return (
     <main>
-      <NewsContext.Provider  value={{ country, setCountry }} //eslint-disable-line
+      <NewsContext.Provider
+        value={{ country, setCountry }} //eslint-disable-line
       >
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +23,7 @@ export default function HomeMain() {
           <Route path="/music" element={<Music />} />
           <Route path="/images" element={<Images />} />
           <Route path="/receipts" element={<Receipts />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </NewsContext.Provider>
     </main>
