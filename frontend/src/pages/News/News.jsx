@@ -3,8 +3,6 @@ import { ToastContainer, toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import NewsContext from "../../contexts/NewsContext";
 import styles from "./News.module.css";
-import Header from "../../Header";
-import Footer from "../../Footer";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -36,7 +34,6 @@ export default function News() {
   }, [country]);
   return (
     <div className={styles.newsContainer}>
-      <Header />
       <ToastContainer />
       {country && (
         <div className={styles.newsPage}>
@@ -53,7 +50,6 @@ export default function News() {
             ))}
         </div>
       )}
-      <Footer />
     </div>
   );
 }
