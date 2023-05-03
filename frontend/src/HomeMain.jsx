@@ -7,6 +7,8 @@ import Images from "./pages/Images/Images";
 import Music from "./pages/Music/Music";
 import Team from "./pages/Team/Team";
 import NewsContext from "./contexts/NewsContext";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function HomeMain() {
   const [country, setCountry] = useState(null);
@@ -16,6 +18,7 @@ export default function HomeMain() {
   return (
     <main>
       <NewsContext.Provider value={countryWrapper}>
+        {country && <Header />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/news" element={<News />} />
@@ -24,6 +27,7 @@ export default function HomeMain() {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/team" element={<Team />} />
         </Routes>
+        <Footer />
       </NewsContext.Provider>
     </main>
   );

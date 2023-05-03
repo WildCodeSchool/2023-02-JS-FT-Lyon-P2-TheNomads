@@ -2,8 +2,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { createClient } from "pexels";
 import React, { useState, useEffect, useContext } from "react";
-import Header from "../../Header";
-import Footer from "../../Footer";
 import NewsContext from "../../contexts/NewsContext";
 import styles from "./Images.module.css";
 
@@ -43,7 +41,6 @@ export default function Images() {
 
   return (
     <div>
-      <Header />
       <ToastContainer />
       <div className={styles.imagesContainerBox}>
         {images &&
@@ -53,7 +50,6 @@ export default function Images() {
             </figure>
           ))}
       </div>
-      <Footer />
     </div>
   );
 }
