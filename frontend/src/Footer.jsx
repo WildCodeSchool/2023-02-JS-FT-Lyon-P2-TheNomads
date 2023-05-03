@@ -4,13 +4,9 @@ function Footer() {
   return (
     <div className={styles.foot}>
       <h1 className={styles.contact}>
-        <a href="mailto:thenomadsp2@gmail.com">
-          Contact: thenomadsp2@gmail.com
-        </a>
+        <a href="mailto:thenomadsp2@gmail.com">Contact</a>
       </h1>
-      <h1 className={styles.team}>
-        <a href="/team">Our team</a>
-      </h1>
+      <h1 className={styles.team}>Our team</h1>
     </div>
   );
 }
