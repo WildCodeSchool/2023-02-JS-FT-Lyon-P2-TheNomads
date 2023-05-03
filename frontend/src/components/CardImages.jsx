@@ -1,5 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { createClient } from "pexels";
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardImages.module.css";
@@ -39,18 +39,15 @@ export default function CardImage() {
     handleClick();
   }, [country]);
   return (
-    <>
-      <ToastContainer />
-      <div className={styles.imagesContainer}>
-        <div className={styles.picturesContainer}>
-          {images &&
-            images.map((image) => (
-              <div className={styles.imageCard}>
-                <img src={image.src.original} alt="Photos" width="400px" />
-              </div>
-            ))}
-        </div>
+    <div className={styles.imagesContainer}>
+      <div className={styles.picturesContainer}>
+        {images &&
+          images.map((image) => (
+            <div className={styles.imageCard}>
+              <img src={image.src.original} alt="Photos" width="400px" />
+            </div>
+          ))}
       </div>
-    </>
+    </div>
   );
 }

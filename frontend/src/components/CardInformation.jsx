@@ -1,5 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardInformation.module.css";
 import NewsContext from "../contexts/NewsContext";
@@ -33,18 +33,15 @@ export default function cardInformation() {
     newsData();
   }, [country]);
   return (
-    <>
-      <ToastContainer />
-      <div className={styles.cardInformation}>
-        <div>
-          {news && (
-            <div className={styles.displayNew} style={{ padding: "15px" }}>
-              <h2>{news.title}</h2>
-              <h2>{news.content}</h2>
-            </div>
-          )}
-        </div>
+    <div className={styles.cardInformation}>
+      <div>
+        {news && (
+          <div className={styles.displayNew} style={{ padding: "15px" }}>
+            <h2>{news.title}</h2>
+            <h2>{news.content}</h2>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 }
