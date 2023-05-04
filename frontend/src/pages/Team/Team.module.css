@@ -35,7 +35,7 @@ body {
 
 .team {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-family: "Roboto", sans-serif;
   color: #bd9479;
