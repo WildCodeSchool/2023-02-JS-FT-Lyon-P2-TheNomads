@@ -23,16 +23,19 @@ export default function CardImage() {
         setImages(photos.photos);
       })
       .catch((err) =>
-        toast.error(`Error while loading data ${err}`, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        })
+        toast.error(
+          `Your images are temporarily unavailable. Please contact Marcelo for more information. ${err}`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
+        )
       );
   };
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import countries from "../../assets/countriesList";
+import countries from "../../assets/countriesList.json";
 import CardInformation from "../../components/CardInformation";
 import CardRecipes from "../../components/CardRecipes";
 import styles from "./Home.module.css";
