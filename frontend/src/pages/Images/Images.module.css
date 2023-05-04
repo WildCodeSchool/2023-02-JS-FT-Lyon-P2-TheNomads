@@ -7,6 +7,14 @@
 .picturesContainer{
   background-image: url('https://cdn.pixabay.com/photo/2015/06/24/13/32/camera-820018_1280.jpg');
   background-size: cover;
+  background-size: 100vw auto;  
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top : 100px;
+
+
 }
 .imagesContainerBox{
   display: flex;
@@ -51,17 +59,3 @@ figure::before{
  
 }
 
-/*
-.figure {
-  width: 400px;
-  height: 400px;
-  margin: 20px;
-  border-radius: 10px;
-
-}
-
-.figure > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}*/

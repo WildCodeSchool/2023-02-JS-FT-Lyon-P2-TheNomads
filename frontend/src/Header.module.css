@@ -6,7 +6,9 @@
   header {
     display: flex;
     position: absolute;
-    right: 0;
+    justify-content: space-between;
+    left: 0;
+    width: 100vw;
     }
 
   .headerLogo {

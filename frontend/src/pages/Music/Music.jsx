@@ -10,7 +10,7 @@ export default function Music() {
         <iframe
           title="deezer-widget"
           src={`https://widget.deezer.com/widget/auto/playlist/${country.playListNumber}`}
-          width="60%"
+          width="70%"
           height="450"
           frameBorder="0"
           allow="encrypted-media; clipboard-write"

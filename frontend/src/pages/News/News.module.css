@@ -2,14 +2,20 @@
 
 .newsContainer {
   background-image: url("https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_960_720.jpg");
+  background-size: 100vw auto;  
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  padding-top : 100px;
 }
 .newsPage {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   font-family: "Roboto", sans-serif;
+
+
 }
 .news {
   display: flex;
