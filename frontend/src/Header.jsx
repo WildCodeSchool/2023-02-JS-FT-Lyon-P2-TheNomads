@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./Header.module.css";
-import logo from "./assets/logo4.png";
+import NewsContext from "./contexts/NewsContext";
 
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+
+  const { country } = useContext(NewsContext);
 
   return (
     <header>
@@ -37,7 +39,7 @@ export default function Header() {
           <span className={styles.burgerbar}> </span>
         </button>
       </nav>
-      <img className={styles.headerLogo} src={logo} alt="Logo" />
+      <img src={country.image} height="50px" alt="country FLag" />
     </header>
   );
 }

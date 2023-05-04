@@ -1,9 +1,7 @@
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { createClient } from "pexels";
 import React, { useState, useEffect, useContext } from "react";
-import Header from "../../Header";
-import Footer from "../../Footer";
 import NewsContext from "../../contexts/NewsContext";
 import styles from "./Images.module.css";
 
@@ -25,7 +23,7 @@ export default function Images() {
         setImages(photos.photos);
       })
       .catch((err) =>
-        toast.error(`Error while loading data ${err}`, {
+        toast.error(`Your images are unavailable. Please contact us ${err}`, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -43,8 +41,6 @@ export default function Images() {
 
   return (
     <div>
-      <Header />
-      <ToastContainer />
       <div className={styles.imagesContainerBox}>
         {images &&
           images.map((image) => (
@@ -53,7 +49,6 @@ export default function Images() {
             </figure>
           ))}
       </div>
-      <Footer />
     </div>
   );
 }
