@@ -16,6 +16,7 @@ export default function Music() {
           allow="encrypted-media; clipboard-write"
         />
       </div>
+      <div className={styles.glow}> </div>
     </div>
   );
 }
