@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 80px;
+  background-image: url("../../assets/bread.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+
+.title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 4rem;
+}
+.recipesContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  padding: 20px;
+  text-align: justify;
+  padding: 50px auto;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  background-color: #bd9479ea;
+  margin: auto;
+}
+
+.category {
+  margin: 10px 0px;
+}
+.recipesContainer > img {
+  margin: auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.recipesContainer > a {
+  margin: auto;
+}

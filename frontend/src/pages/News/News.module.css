@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  padding-top: 50px;
   font-family: "Roboto", sans-serif;
 }
 .news {
@@ -18,7 +19,7 @@
   justify-content: space-around;
   width: 350px;
   height: 250px;
-  margin: 20px auto;
+  margin: 0px auto;
   border-radius: 10px;
   padding: 20px;
   overflow: hidden;

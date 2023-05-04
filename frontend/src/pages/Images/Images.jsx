@@ -23,7 +23,7 @@ export default function Images() {
         setImages(photos.photos);
       })
       .catch((err) =>
-        toast.error(`Error while loading data ${err}`, {
+        toast.error(`Your images are unavailable. Please contact us ${err}`, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -44,9 +44,11 @@ export default function Images() {
       <div className={styles.imagesContainerBox}>
         {images &&
           images.map((image) => (
-            <figure className={styles.figure}>
-              <img src={image.src.original} alt="Photos" width="400px" />
-            </figure>
+            <div className={styles.polaroid}>
+              <figure className={styles.figure}>
+                <img src={image.src.original} alt="Photos" width="400px" />
+              </figure>
+            </div>
           ))}
       </div>
     </div>

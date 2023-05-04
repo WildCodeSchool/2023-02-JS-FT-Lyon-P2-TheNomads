@@ -17,7 +17,7 @@ export default function News() {
       .then((res) => res.json())
       .then((response) => setNews(response.articles))
       .catch((err) =>
-        toast.error(`Error while loading data ${err}`, {
+        toast.error(`Your news are unavailable. Please contact us ${err}`, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
