@@ -5,7 +5,6 @@ import styles from "./Recipes.module.css";
 export default function Recipes() {
   const { country } = useContext(NewsContext);
 
-  // const [codeFood, setCodeFood] = useState(null);
   const [food, setFood] = useState(null);
 
   const handleRecipe = (data) => {
@@ -20,7 +19,6 @@ export default function Recipes() {
     )
       .then((response) => response.json())
       .then((data) => handleRecipe(data.meals[0].idMeal));
-    // .then((data) => console.log(data.meals))
   };
 
   useEffect(() => {
@@ -28,16 +26,20 @@ export default function Recipes() {
   }, []);
 
   return (
-    <>
-      <div> RECIPES </div>
-      {country.food}
+    <div className={styles.container}>
       {food && (
         <div className={styles.recipesContainer}>
-          <h1>Name: {food.strMeal}</h1>
-          <h2>Category: {food.strCategory}</h2>
-          <p>Instructions: {food.strInstructions}</p>
+          <h1 className={styles.name}>Name: {food.strMeal}</h1>
+          <h2 className={styles.category}>Category: {food.strCategory}</h2>
+          <p>
+            <b>Instructions:</b> {food.strInstructions}
+          </p>
+          <img src={food.strMealThumb} alt="YouTube Video" />
+          <a href={food.strYoutube} target="_blank" rel="noopener noreferrer">
+            Click here to watch the video on YouTube
+          </a>
         </div>
       )}
-    </>
+    </div>
   );
 }
