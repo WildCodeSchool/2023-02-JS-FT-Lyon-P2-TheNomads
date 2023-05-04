@@ -1,5 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import NewsContext from "../../contexts/NewsContext";
 import styles from "./News.module.css";
@@ -34,7 +34,6 @@ export default function News() {
   }, [country]);
   return (
     <div className={styles.newsContainer}>
-      <ToastContainer />
       {country && (
         <div className={styles.newsPage}>
           {news &&
