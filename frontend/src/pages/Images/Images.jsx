@@ -40,7 +40,7 @@ export default function Images() {
   }, [country]);
 
   return (
-    <div>
+    <div className>
       <div className={styles.imagesContainerBox}>
         {images &&
           images.map((image) => (

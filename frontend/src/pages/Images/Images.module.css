@@ -4,17 +4,20 @@
   box-sizing: border-box;
 
 }
-.picturesContainer{
-  background-image: url('https://cdn.pixabay.com/photo/2015/06/24/13/32/camera-820018_1280.jpg');
-  background-size: cover;
-}
+
 .imagesContainerBox{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
- 
+  background-image: url('https://cdn.pixabay.com/photo/2015/06/24/13/32/camera-820018_1280.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 100px;
 }
 .polaroid{
   display: flex;
