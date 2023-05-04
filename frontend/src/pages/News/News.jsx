@@ -1,5 +1,5 @@
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import NewsContext from "../../contexts/NewsContext";
 import styles from "./News.module.css";
@@ -17,7 +17,7 @@ export default function News() {
       .then((res) => res.json())
       .then((response) => setNews(response.articles))
       .catch((err) =>
-        toast.error(`Error while loading data ${err}`, {
+        toast.error(`Your news are unavailable. Please contact us ${err}`, {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -34,7 +34,6 @@ export default function News() {
   }, [country]);
   return (
     <div className={styles.newsContainer}>
-      <ToastContainer />
       {country && (
         <div className={styles.newsPage}>
           {news &&

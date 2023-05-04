@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { useMemo, useState } from "react";
+import { ToastContainer } from "react-toastify";
 import Home from "./pages/Home/Home";
 import News from "./pages/News/News";
 import Recipes from "./pages/Recipes/Recipes";
@@ -18,6 +19,7 @@ export default function HomeMain() {
   return (
     <main>
       <NewsContext.Provider value={countryWrapper}>
+        <ToastContainer />
         {country && <Header />}
         <Routes>
           <Route path="/" element={<Home />} />
