@@ -40,13 +40,15 @@ export default function Images() {
   }, [country]);
 
   return (
-    <div>
+    <div className>
       <div className={styles.imagesContainerBox}>
         {images &&
           images.map((image) => (
-            <figure className={styles.figure}>
-              <img src={image.src.original} alt="Photos" width="400px" />
-            </figure>
+            <div className={styles.polaroid}>
+              <figure className={styles.figure}>
+                <img src={image.src.original} alt="Photos" width="400px" />
+              </figure>
+            </div>
           ))}
       </div>
     </div>
