@@ -7,11 +7,6 @@
 .musicPage {
   background-image: url("https://cdn.pixabay.com/photo/2019/12/18/04/11/dj-4702977_960_720.jpg");
   background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding-top : 100px;
-height: 100vh;
 }
 
 .musicContainer {
@@ -20,7 +15,7 @@ height: 100vh;
   align-items: center;
   justify-content: center;
   width: auto;
-  margin-top: 100px;
+  height: 650px;
 }
 
 .musicContainer > iframe {
