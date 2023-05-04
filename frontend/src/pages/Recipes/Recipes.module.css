@@ -8,8 +8,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 80px;
+  background-image: url("../../assets/bread.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
+
 
 .title {
   text-align: center;
@@ -23,11 +30,11 @@
   max-width: 900px;
   padding: 20px;
   text-align: justify;
-  margin: 50px auto;
+  padding: 50px auto;
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
-  background-color: #bd9479;
-
+  background-color: #bd9479ea;
+  margin: auto;
 }
 
 .category {

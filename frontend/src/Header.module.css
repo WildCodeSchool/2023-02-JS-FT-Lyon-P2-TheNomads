@@ -133,6 +133,9 @@
     justify-content: space-between;
     background-color: #bd9479ec;
     /* border: 2px solid red; */
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
 
   }
   .navbarlinks {
