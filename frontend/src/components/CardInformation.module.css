@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.cardInformation {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+  margin:auto;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color:#BD9479;
+  color: #151B11;
+  font-size: 0.6em;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  height: 250px;
+
+}
+
+
+.cardInformation::before{
+  content: "News";
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+.cardInformation:hover,
+.cardInformation:focus {
+  color: #151B11;
+  background-color:#BD9479;;
+  opacity: 1;
+  font-weight: bold;
+  transition: all .3s ease;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+}
+
+.displayNew {
+ background: linear-gradient( #BD9479, #151b1185);
+  height: 210px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+@media screen and (min-width:700px){
+
+  .cardInformation{
+      font-size: .8em;
+
+  }
+} 

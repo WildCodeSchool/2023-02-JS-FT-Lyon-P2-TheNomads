@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.newsContainer {
+  background-image: url("https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.newsPage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 250px;
+  margin: 0px auto;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #bd9479;
+  color: #151b11;
+  font-size: 0.6em;
+  opacity: 0.8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.news::before {
+  font-size: 20px;
+  font-weight: bold;
+}
+.news:hover,
+.news:focus {
+  color: #151b11;
+  background-color: #bd9479;
+  opacity: 1;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  cursor: pointer;
+}
+
+.news a {
+  color: #151b11;
+  font-size: 2em;
+  background-color: #bd9479;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+
+.news a:hover,
+.news a:focus {
+  background-color: #151b11;
+  color: #bd9479;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.news h1 {
+  padding: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .newsPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .news {
+    width: 450px;
+    padding: 20px;
+    margin: 20px;
+  }
+}
