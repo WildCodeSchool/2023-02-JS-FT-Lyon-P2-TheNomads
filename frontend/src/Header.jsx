@@ -39,7 +39,12 @@ export default function Header() {
           <span className={styles.burgerbar}> </span>
         </button>
       </nav>
-      <img src={country.image} height="50px" alt="country FLag" />
+      <img
+        src={country.image}
+        className={styles.flag}
+        height="50px"
+        alt="country FLag"
+      />
     </header>
   );
 }
