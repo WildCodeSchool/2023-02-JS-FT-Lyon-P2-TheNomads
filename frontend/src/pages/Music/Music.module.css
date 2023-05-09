@@ -21,6 +21,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 .glow {
@@ -28,22 +30,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ffffff;
-  height: 450px;
-  width: 70%;  
-  transform: translate(-50%, -50%);
-  border-radius: 50px;
- 
+  height: 463px;
+  width:63%;  
+  /*transform: translate(-50%, -50%);*/
+  border-radius: 20px;
+ position: absolute;
   box-shadow: 0 20px 35px rbba(0,0,0,0.3);
 overflow: hidden;
-z-index: 1;
 
 }
 .glow:before{
   content: "";
   position: absolute;
-  height: 150%;
-  width: 150%;
+  height: 600%;
+  width: 300%;
+  z-index: 1;
 
   background : conic-gradient(   
   #fd004c,
@@ -53,9 +54,10 @@ z-index: 1;
   #3363ff,
   #b102b7,
   #fd004c);
+  
 
 animation: spin 1.5s infinite linear}
-/*
+
   .glow:after{
     content: "";
     position: absolute;
@@ -67,7 +69,7 @@ animation: spin 1.5s infinite linear}
     border-radius: 5px;
 
   }
-*/
+
   @keyframes spin {
     100%{
       transform: rotate(-360deg);
@@ -75,10 +77,9 @@ animation: spin 1.5s infinite linear}
     
   }
 
-/*.musicContainer > iframe {
+.musicContainer > iframe {
   border-radius: 20px;
   box-shadow: 0px 4px 4px #BD9479(0, 0, 0, 0.25);
-  border-width: 10px;
-  border-color: #bd9479;
+
+  z-index: 2;
 }
-*/

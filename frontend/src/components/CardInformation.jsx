@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import React, { useState, useEffect, useContext } from "react";
 import styles from "./CardInformation.module.css";
 import NewsContext from "../contexts/NewsContext";
+import newspaper from "../assets/newspaper.png";
 
 const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -42,6 +43,7 @@ export default function cardInformation() {
           <div className={styles.displayNew} style={{ padding: "15px" }}>
             <h2>{news.title}</h2>
             <h2>{news.content}</h2>
+            <img className={styles.newsPaper} src={newspaper} alt="newspaper" />
           </div>
         )}
       </div>

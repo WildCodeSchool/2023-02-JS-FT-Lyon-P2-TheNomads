@@ -181,4 +181,7 @@
     height: 250px;
     margin: auto;
   }
+  .flag{
+    margin-right: 10px;
+  }
 }
