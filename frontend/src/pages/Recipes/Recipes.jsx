@@ -37,6 +37,11 @@ export default function Recipes() {
           <img src={food.strMealThumb} alt="YouTube Video" />
           <a href={food.strYoutube} target="_blank" rel="noopener noreferrer">
             Click here to watch the video on YouTube
+            <img
+              width="50px"
+              src="https://cdn.pixabay.com/photo/2021/02/19/14/24/youtube-subscribe-button-6030373_1280.png"
+              alt=""
+            />
           </a>
         </div>
       )}
