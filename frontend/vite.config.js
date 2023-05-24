@@ -14,4 +14,9 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "src/services"),
     },
   },
+  build: {
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
 });
